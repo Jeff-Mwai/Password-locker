@@ -1,3 +1,8 @@
+import random
+import string
+
+
+
 users = list()
 credentials = list()
 class Credentials:
@@ -9,13 +14,28 @@ class Credentials:
 
     def my_credentials():
         print("Choose one of the following options to continue")
-        print("\n1. Create new credentials \n2. Store credentials of existing accounts \n3. View existing credentials \4. Logout")
+        print("\n1. Create new credentials \n2. Store credentials of existing accounts \n3. View existing credentials \n4. Logout")
         credentials_option = input()
         if credentials_option == "1":
-            print("yoh, chill a bit")
-        elif credentials_option = "2":
-            account1 = Credentials(account_name = input("Account Name: "), username = input("Username: "), password = input("Password: "))
+            print("Do you want a system generated password?")
+            option = input("\n1. Yes \n2. No")
+            if option == "1":
+
+                account1 = Credentials(account_name = input("Account Name (e.g. Twitter): "), username = input("Username: "), password = Users.random_password(10))
+                credentials.append(account1)
+                Credentials.my_credentials()
+            elif option == "2":
+                account1 = Credentials(account_name = input("Account Name (e.g. Twitter): "), username = input("Username: "), password = input("Password: "))
+                credentials.append(account1)
+                Credentials.my_credentials()
+            else:
+                print("Invalid input")
+                Credentials.my_credentials()
+
+        elif credentials_option == "2":
+            account1 = Credentials(account_name = input("Account Name (e.g. Twitter): "), username = input("Username: "), password = input("Password: "))
             credentials.append(account1)
+            Credentials.my_credentials()
             
         elif credentials_option == "3":
             for x in credentials:
@@ -24,6 +44,8 @@ class Credentials:
             Users.login()
         else:
             print("Invalid input")
+
+  
         
             
             
@@ -47,6 +69,12 @@ class Users:
             Credentials.my_credentials()
         else:
             print("Error")
+    
+    def random_password(length):
+    # Random string with the combination of lower and upper case
+        letters = string.ascii_letters
+        result_str = ''.join(random.choice(letters) for i in range(length))
+        print("Random string is:", result_str)
 
 class Main:
 
