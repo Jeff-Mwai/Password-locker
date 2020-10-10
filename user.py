@@ -15,7 +15,7 @@ class Users:
         for x in users:
             print(x.username)
         if x.username == username and x.password == password:
-            print("Login successful")
+            Credentials.my_credentials()
         else:
             print("Error")
 
@@ -25,6 +25,7 @@ class Main:
         user1 = Users(input("Username: "), input("Password: "))
         users.append(user1)
         Users.login()
+
       
         
         
@@ -45,5 +46,17 @@ class Main:
         exit()
     else:
         print("Invalid option")
+
+class Credentials:
+    
+    def __init__(self, account_name, username, password)
+        self.account_name = account_name
+        self.username = username
+        self.password = password
+
+    def my_credentials():
+        print("Choose one of the following options to continue")
+        print("\n1. Create new credentials \n2. Store credentials of existing accounts \n3. View existing credentials \4. Logout")
+
 
     
