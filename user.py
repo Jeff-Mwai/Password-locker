@@ -20,14 +20,16 @@ class Credentials:
             print("Do you want a system generated password?")
             option = input("\n1. Yes \n2. No")
             if option == "1":
-
-                account1 = Credentials(account_name = input("Account Name (e.g. Twitter): "), username = input("Username: "), password = Users.random_password(10))
+                pwd =Users.random_password(10)
+                account1 = Credentials(account_name = input("Account Name (e.g. Twitter): "), username = input("Username: "),  password=pwd)
                 credentials.append(account1)
-                Credentials.my_credentials()
+                for x in credentials:
+                    print("Account: " + x.account_name,"Username: " + x.username,"Password: " + x.password)
             elif option == "2":
                 account1 = Credentials(account_name = input("Account Name (e.g. Twitter): "), username = input("Username: "), password = input("Password: "))
                 credentials.append(account1)
-                Credentials.my_credentials()
+                for x in credentials:
+                    print("Account: " + x.account_name,"Username: " + x.username,"Password: " + x.password)
             else:
                 print("Invalid input")
                 Credentials.my_credentials()
@@ -39,16 +41,12 @@ class Credentials:
             
         elif credentials_option == "3":
             for x in credentials:
-                print(x.account_name, x.username, x.password)
+                print("Account: " + x.account_name,"Username: " + x.username,"Password: " + x.password)
         elif credentials_option == "4":
             Users.login()
         else:
             print("Invalid input")
 
-  
-        
-            
-            
 
 
 class Users:
@@ -64,31 +62,25 @@ class Users:
         password = input("Password: ")
 
         for x in users:
-            print(x.username)
-        if x.username == username and x.password == password:
-            Credentials.my_credentials()
-        else:
-            print("Error")
+            if x.username == username and x.password == password:
+                Credentials.my_credentials()
+            else:
+                print("Error")
     
     def random_password(length):
     # Random string with the combination of lower and upper case
         letters = string.ascii_letters
         result_str = ''.join(random.choice(letters) for i in range(length))
-        print("Random string is:", result_str)
+        return result_str
 
 class Main:
 
+    user1 = Users("user", "1234")
+    users.append(user1)
     def create_account():
         user1 = Users(input("Username: "), input("Password: "))
         users.append(user1)
         Users.login()
-
-      
-        
-        
-
-   
-
 
 
     print("Hello, welcome to Password Locker. Choose one of the three options to continue:")
@@ -96,7 +88,7 @@ class Main:
     user_option = input()
 
     if user_option == "1":
-        login()
+        Users.login()
     elif user_option == "2":
         create_account()
     elif user_option == "3":
