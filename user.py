@@ -11,8 +11,10 @@ class Users:
         print("Put your credentials to login")
         username = input("Username: ")
         password = input("Password: ")
-        user1 = users(username, password)
-        if username ==user1.username and password == user1.password:
+
+        for x in users:
+            print(x.username)
+        if x.username == username and x.password == password:
             print("Login successful")
         else:
             print("Error")
@@ -23,9 +25,8 @@ class Main:
         user1 = Users(input("Username: "), input("Password: "))
         users.append(user1)
         Users.login()
+      
         
-        for x in users:
-            print(x.username)
         
 
    
