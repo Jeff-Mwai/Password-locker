@@ -1,4 +1,33 @@
 users = list()
+credentials = list()
+class Credentials:
+    
+    def __init__(self, account_name, username, password):
+        self.account_name = account_name
+        self.username = username
+        self.password = password
+
+    def my_credentials():
+        print("Choose one of the following options to continue")
+        print("\n1. Create new credentials \n2. Store credentials of existing accounts \n3. View existing credentials \4. Logout")
+        credentials_option = input()
+        if credentials_option == "1":
+            print("yoh, chill a bit")
+        elif credentials_option = "2":
+            account1 = Credentials(account_name = input("Account Name: "), username = input("Username: "), password = input("Password: "))
+            credentials.append(account1)
+            
+        elif credentials_option == "3":
+            for x in credentials:
+                print(x.account_name, x.username, x.password)
+        elif credentials_option == "4":
+            Users.login()
+        else:
+            print("Invalid input")
+        
+            
+            
+
 
 class Users:
 
@@ -47,16 +76,6 @@ class Main:
     else:
         print("Invalid option")
 
-class Credentials:
-    
-    def __init__(self, account_name, username, password)
-        self.account_name = account_name
-        self.username = username
-        self.password = password
-
-    def my_credentials():
-        print("Choose one of the following options to continue")
-        print("\n1. Create new credentials \n2. Store credentials of existing accounts \n3. View existing credentials \4. Logout")
 
 
     
