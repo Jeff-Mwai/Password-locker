@@ -23,13 +23,15 @@ class Credentials:
                 pwd =Users.random_password(10)
                 account1 = Credentials(account_name = input("Account Name (e.g. Twitter): "), username = input("Username: "),  password=pwd)
                 credentials.append(account1)
-                for x in credentials:
-                    print("Account: " + x.account_name,"Username: " + x.username,"Password: " + x.password)
+                Users.view_credentials()
+                # for x in credentials:
+                #     print("Account: " + x.account_name,"Username: " + x.username,"Password: " + x.password)
             elif option == "2":
                 account1 = Credentials(account_name = input("Account Name (e.g. Twitter): "), username = input("Username: "), password = input("Password: "))
                 credentials.append(account1)
-                for x in credentials:
-                    print("Account: " + x.account_name,"Username: " + x.username,"Password: " + x.password)
+                # for x in credentials:
+                #     print("Account: " + x.account_name,"Username: " + x.username,"Password: " + x.password)
+                Users.view_credentials()
             else:
                 print("Invalid input")
                 Credentials.my_credentials()
@@ -37,15 +39,18 @@ class Credentials:
         elif credentials_option == "2":
             account1 = Credentials(account_name = input("Account Name (e.g. Twitter): "), username = input("Username: "), password = input("Password: "))
             credentials.append(account1)
-            Credentials.my_credentials()
+            Users.view_credentials()
             
         elif credentials_option == "3":
-            for x in credentials:
-                print("Account: " + x.account_name,"Username: " + x.username,"Password: " + x.password)
+            Users.view_credentials()
+            # for x in credentials:
+            #     print("Account: " + x.account_name,"Username: " + x.username,"Password: " + x.password)
         elif credentials_option == "4":
-            Users.login()
+            print("You have logged out")
+            exit()
         else:
             print("Invalid input")
+            Credentials.my_credentials()
 
 
 
@@ -68,7 +73,20 @@ class Users:
                 print("Error")
 
     def view_credentials():
-        print("?")
+        print("You can choose one of the options below to view your credentials:")
+        print("\n1. Yes \n2. No")
+        viewers_choice = input()
+        if viewers_choice == "1":
+            for x in credentials:
+                print("Account: " + x.account_name,"Username: " + x.username,"Password: " + x.password)
+        elif viewers_choice == "2":
+            print("Thanks for visiting")
+            Users.login()
+        else:
+            print("invalid choice")
+            Users.login()
+
+
     
     def random_password(length):
     # Random string with the combination of lower and upper case
