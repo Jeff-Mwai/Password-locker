@@ -33,6 +33,7 @@ class Credentials:
                 account1 = Credentials(account_name = input("Account Name (e.g. Twitter): "), username = input("Username: "),  password=pwd)
                 credentials.append(account1)
                 Users.view_credentials()
+                Users.delete()
                 # for x in credentials:
                 #     print("Account: " + x.account_name,"Username: " + x.username,"Password: " + x.password)
             elif option == "2":
@@ -41,6 +42,7 @@ class Credentials:
                 # for x in credentials:
                 #     print("Account: " + x.account_name,"Username: " + x.username,"Password: " + x.password)
                 Users.view_credentials()
+                Users.delete()
             else:
                 print("Invalid input")
                 Credentials.my_credentials()
@@ -49,6 +51,7 @@ class Credentials:
             account1 = Credentials(account_name = input("Account Name (e.g. Twitter): "), username = input("Username: "), password = input("Password: "))
             credentials.append(account1)
             Users.view_credentials()
+            Users.delete()                  
             
         elif credentials_option == "3":
             Users.view_credentials()
@@ -106,6 +109,20 @@ class Users:
         else:
             print("invalid choice")
             Users.login()
+
+    def delete():
+        print("Do you want to delete credentials that you no longer want in the application?")
+        print("\n1. Yes \n2. No")
+        delete_option = input()
+        if delete_option == "1":
+            credentials.clear()
+            print("You have deleted credentials from the list")
+        elif delete_option == "2":
+            print("your details are still stored in the application")
+        else:
+            print("Invalid input.")
+            delete()
+
 
 
     
