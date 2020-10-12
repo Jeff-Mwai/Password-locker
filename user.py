@@ -61,6 +61,10 @@ class Credentials:
             print("Invalid input")
             Credentials.my_credentials()
 
+        """
+        The credentials class has methods that are used to either input details of existing accounts, generate password and view the stored credentials
+        """
+
 
 
 class Users:
@@ -85,6 +89,10 @@ class Users:
             else:
                 print("Error")
 
+        """
+        Created a login method that authenticates the users' details
+        """
+
     def view_credentials():
         print("You can choose one of the options below to view your credentials:")
         print("\n1. Yes \n2. No")
@@ -107,6 +115,10 @@ class Users:
         result_str = ''.join(random.choice(letters) for i in range(length))
         return result_str
 
+    """
+    created a method to generate a random password
+    """
+
 class Main:
 
     user1 = Users("user", "1234")
@@ -115,6 +127,10 @@ class Main:
         user1 = Users(input("Username: "), input("Password: "))
         users.append(user1)
         Users.login()
+
+    """
+    Created a create account method that calls the login function
+    """
 
 
     print("Hello, welcome to Password Locker. Choose one of the three options to continue:")
