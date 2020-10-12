@@ -66,6 +66,9 @@ class Users:
                 Credentials.my_credentials()
             else:
                 print("Error")
+
+    def view_credentials():
+        print("?")
     
     def random_password(length):
     # Random string with the combination of lower and upper case
