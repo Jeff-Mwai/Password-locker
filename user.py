@@ -146,7 +146,7 @@ class Main:
         Users.login()
 
     """
-    Created a create account method that calls the login function
+    Created a create account method that calls the login functiong
     """
     def main():
 
