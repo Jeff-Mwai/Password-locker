@@ -61,5 +61,4 @@ The user.... :
 If you have any question or contributions, please email me at [jeffmwai3@gmail.com]
 
 ## License
-* *MIT License:*
-* Copyright (c) 2019 **Owiti Charles**
+* [[License: MIT]](LICENCE.md)
