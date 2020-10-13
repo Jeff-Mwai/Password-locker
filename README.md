@@ -1,42 +1,69 @@
-#### Password Locker, October 28th 2020
-#### By **Jeffrey Mwai**
+# Password-Locker
+## Author
+
+[Jeff-Mwai](https://github.com/Jeff-Mwai)
 
 ## Description
-- Quotes For Life is an application that has several quotes in it. It enables users to add quotes,delete quotes, upvote the best or downvote others.
 
-## Behaviour Driven Development(BDD)
+Password Locker is a python project that enables the user to save their account details and passwords. The platform saves the users details and goes to the extent of generating new passwords.
 
-| Input                        | Ouput                                                                                            |
-|--------------------------    |----------------------------------------------------------------------------------------------    |
-| A form is provided to input quote     | User submits quote which appends in a card                  |
-| User Clicks Delete           | The quote is purged from view             |
-| User clicks Upvote        |   upvote is incremented value by   1 on each click      |
-| User clicks Downvote     | downvote is decremented value by 1 on each click     |
+## User Stories
+The user would like to.... :
+* To create an account for the application or log into the application.
+* Store my existing acounts login details for various accounts that i have registered for.
+* Generate new password for an account that i haven't registered for and store it with the account name.   
+* Delete stored account login details that i do now want anymore.
+* Copy my credentials to the clipboard
 
-## Setup/Installation requirements
 
-- Clone  or download and unzip the repository from github, [https://github.com/Jeff-Mwai/quotes-app](https://github.com/Jeff-Mwai/quotes-app.git).
-- If you have git Use this command `git clone *` to clone the project.
-- Run ng serve from your terminal
+## Installation / Setup instruction
 
-## Live Demo
-To view the page click on the link below
-* [https://jeff-mwai.github.io/quotes-app/.](*)
+#### The application requires the following installations to operate 
+* python3.6
+* pyperclip
+* pip
 
-## Figma Link
-* [https://www.figma.com/file/s15O3k8cpj4AQHHwJjMKAE/Quotes?node-id=0%3A1](*)
+#### Cloning
+
+* Open Terminal {Ctrl+Alt+T}
+
+* git clone ```https://github.com/Owiti-Charles/Password-Locker.git```
+
+* cd Password-Locker
+
+* code . or atom . based on the text editor you have.
+
+### Running the Application
+* To run the application, open the cloned file in terminal and run the following commands:
+
+        $ chmod +x interface.py
+        $ ./interface.py
+* To run test for the application
+        $ python3 passlock_test.py
+
+## Behaviour Driven Development
+| Behaviour | Input | Output |
+| :---------------- | :---------------: | ------------------: |
+|Open the application on the terminal | Run the command ```$ ./interface.py```|Hello Welcome to your Accounts Password Store... <br>* CA ---  Create New Account * LI ---  Have An Account |
+|Select  CA| input username and password| Hello ```username```, Your account has been created succesfully! Your password is: ```password```|
+|Select LI  | Enter your password and username you signed up with| Abbreviations menu to help you navigate through the application|
+|Store a new credential in the application| Enter ```CC```|Enter Account, username, password<br>choose ```tp``` to enter your password or ```gp``` for the application to generate a password for you |
+|Display all stored credentials | Enter ```DC```|A list of all credentials that has been stored or ```You don't have any credentials saved yet``` |
+|Find a stored credential based on account name|Enter ```FC```| Enter the Account Name you want to search for and returns the account details|
+|Delete an existing credential that you don't want anymore|Enter ```D```|Enter the account name of the Credentials you want to delete and returns true if the account has been deleted and false if the account doesn't exixt|
+|Exit the application| Enter ```D```| The application exits|
 
 ## Technologies Used
-- Angular CLI
+
+* python3.6
 
 ## Known Bugs
-- The application does not have any known bugs currently.
+* There are no known bugs currently but pull requests are allowed incase you spot a bug
 
-## Support and Contact Details
-- For any comments,suggestions,feedback or inquiries, contact me via email: `jeffmwai3@gmail.com`
+## Contact Information 
 
-### License
+If you have any question or contributions, please email me at [mikeycharlesm7@gmail.com]
 
-* [MIT] (c) 2020 **Jeffrey Mwai** 
-
-
+## License
+* *MIT License:*
+* Copyright (c) 2019 **Owiti Charles**

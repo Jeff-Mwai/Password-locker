@@ -88,9 +88,11 @@ class Users:
 
         for x in users:
             if x.username == username and x.password == password:
+                print("Login successful")
                 Credentials.my_credentials()
             else:
                 print("Error")
+                
 
         """
         Created a login method that authenticates the users' details
@@ -157,7 +159,7 @@ class Main:
         if user_option == "1":
             Users.login()
         elif user_option == "2":
-            create_account()
+            Main.create_account()
         elif user_option == "3":
             exit()
         else:
