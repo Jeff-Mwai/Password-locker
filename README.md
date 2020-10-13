@@ -62,3 +62,4 @@ If you have any question or contributions, please email me at [jeffmwai3@gmail.c
 
 ## License
 * [[License: MIT]](LICENCE.md)
+* Copyright (c) 2019 **Jeffrey Mwai**
