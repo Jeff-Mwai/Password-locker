@@ -8,43 +8,41 @@
 Password Locker is a python project that enables the user to save their account details and passwords. The platform saves the users details and goes to the extent of generating new passwords.
 
 ## User Stories
-The user would like to.... :
+The user.... :
+* Creates an account for the application
 * To create an account for the application or log into the application.
-* Store my existing acounts login details for various accounts that i have registered for.
-* Generate new password for an account that i haven't registered for and store it with the account name.   
-* Delete stored account login details that i do now want anymore.
-* Copy my credentials to the clipboard
+* The platform stores the various accounts that the user has.
+* Password locker generates a new password for a user that does not have a registered account yet. 
+* Password locker enables the user to delete accoun credentials that he or she does no longer require.
 
 
 ## Installation / Setup instruction
 
 #### The application requires the following installations to operate 
 * python3.6
-* pyperclip
 * pip
 
 #### Cloning
 
 * Open Terminal {Ctrl+Alt+T}
 
-* git clone ```https://github.com/Owiti-Charles/Password-Locker.git```
+* git clone ```https://github.com/Jeff-Mwai/Password-locker.git```
 
-* cd Password-Locker
+* cd Password-locker
 
-* code . or atom . based on the text editor you have.
+* code . to open in visual studio code.
 
 ### Running the Application
 * To run the application, open the cloned file in terminal and run the following commands:
 
-        $ chmod +x interface.py
-        $ ./interface.py
+        $ python3 user.py
 * To run test for the application
-        $ python3 passlock_test.py
+        $ python3 user_test.py
 
 ## Behaviour Driven Development
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
-|Open the application on the terminal | Run the command ```$ ./interface.py```|Hello Welcome to your Accounts Password Store... <br>* CA ---  Create New Account * LI ---  Have An Account |
+|Open the application on the terminal | Run the command ```$ ./python3 user.py```|Hello Welcome to your Accounts Password Store... <br>* CA ---  Create New Account * LI ---  Have An Account |
 |Select  CA| input username and password| Hello ```username```, Your account has been created succesfully! Your password is: ```password```|
 |Select LI  | Enter your password and username you signed up with| Abbreviations menu to help you navigate through the application|
 |Store a new credential in the application| Enter ```CC```|Enter Account, username, password<br>choose ```tp``` to enter your password or ```gp``` for the application to generate a password for you |
