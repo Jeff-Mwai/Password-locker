@@ -91,7 +91,8 @@ class Users:
                 print("Login successful")
                 Credentials.my_credentials()
             else:
-                print("Error")
+                pass
+       
                 
 
         """
@@ -143,9 +144,17 @@ class Main:
     user1 = Users("user", "1234")
     users.append(user1)
     def create_account():
+        print("Kindly input your preferred username and password to proceed")
         user1 = Users(input("Username: "), input("Password: "))
         users.append(user1)
-        Users.login()
+        print("Your account has been created successfully.")
+        print("select 1 to login and 2 to exit")
+        option = input()
+        if option == "1":
+            Users.login()
+        else:
+            Main.create_account()
+            
 
     """
     Created a create account method that calls the login functiong
